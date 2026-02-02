@@ -74,6 +74,11 @@ The system is controlled by the `orchestrator.py` script. You can run a full ana
 python3 orchestrator.py --brand "BrandName" --urls "path/to/urls.txt" --perf "path/to/performance.csv" --sched "path/to/schedule.csv"
 ```
 
+### Input Data Formats
+To help you get started, we have provided templates for the optional performance correlation:
+- **`performance_template.csv`**: Contains daily metrics. Requires `day` (YYYY-MM-DD) and `Weekly+` (percentage or float) columns.
+- **`schedule_template.csv`**: Maps videos to date ranges. Requires `Início` (DD/MM/YYYY), `Fim` (DD/MM/YYYY), and columns containing `Link` in their name for the YouTube URLs.
+
 **Parameters:**
 *   `--brand`: Name of the brand (creates a subfolder in `outputs/`).
 *   `--urls`: Text file with one YouTube URL per line.
