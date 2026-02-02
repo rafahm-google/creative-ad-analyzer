@@ -4,7 +4,7 @@
 
 (THIS IS NOT AN OFFICIAL GOOGLE TOOL)
 
-This project is an automated pipeline designed to audit, analyze, and optimize video advertising creatives using Google's **Gemini Multimodal AI**. It moves beyond manual review to provide data-driven insights connecting Creative Attributes (ABCD Framework, Tone, Focus) with Business Performance (Weekly+, Sales, etc.).
+This project is an automated pipeline designed to audit, analyze, and optimize video advertising creatives using Google's **Gemini Multimodal AI**. It moves beyond manual review to provide data-driven insights connecting Creative Attributes (ABCD Framework, Tone, Focus) with Business Performance (Sales, Conversion, etc.).
 
 ## Key Features
 
@@ -76,7 +76,7 @@ python3 orchestrator.py --brand "BrandName" --urls "path/to/urls.txt" --perf "pa
 
 ### Input Data Formats
 To help you get started, we have provided templates for the optional performance correlation:
-- **`performance_template.csv`**: Contains daily metrics. Requires `day` (YYYY-MM-DD) and `Weekly+` (percentage or float) columns.
+- **`performance_template.csv`**: Contains daily metrics. Requires `day` (YYYY-MM-DD) and `PerformanceMetric` (percentage or float) columns.
 - **`schedule_template.csv`**: Maps videos to date ranges. Requires `Início` (DD/MM/YYYY), `Fim` (DD/MM/YYYY), and columns containing `Link` in their name for the YouTube URLs.
 
 **Parameters:**

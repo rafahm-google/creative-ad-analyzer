@@ -52,8 +52,8 @@ def correlate_performance(performance_csv, schedule_csv, analysis_csv, output_cs
 
     # 1. Parse Dates & Clean Data
     df_perf['day'] = pd.to_datetime(df_perf['day'])
-    if df_perf['Weekly+'].dtype == 'object':
-        df_perf['Weekly+'] = df_perf['Weekly+'].str.rstrip('%').astype(float)
+    if 'PerformanceMetric' in df_perf.columns and df_perf['PerformanceMetric'].dtype == 'object':
+        df_perf['PerformanceMetric'] = df_perf['PerformanceMetric'].str.rstrip('%').astype(float)
 
     # 2. Build Daily Creative Map
     daily_creatives = {}
@@ -131,7 +131,7 @@ def get_top_bottom_insights(performance_mix_csv, analysis_csv, n=20):
     df = pd.read_csv(performance_mix_csv)
     df_meta = pd.read_csv(analysis_csv)
     
-    df = df.sort_values('Weekly+', ascending=False)
+    df = df.sort_values('PerformanceMetric', ascending=False)
     top = df.head(n)
     bot = df.tail(n)
     

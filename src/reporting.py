@@ -48,7 +48,7 @@ O relatório deve ser analítico, detalhado e visualmente limpo.
 4. DETALHAMENTO DOS VÍDEOS: {json.dumps(details, ensure_ascii=False, indent=2)}
 
 --- REGRAS DE ANONIMIZAÇÃO ---
-- NUNCA use "Coca-Cola" ou "Weekly+". Use "A Marca" e "KPI de Negócio".
+- NUNCA use nomes de marcas específicas ou nomes de métricas proprietárias. Use "A Marca" e "KPI de Negócio".
 
 --- ESTRUTURA HTML E CSS (OBRIGATÓRIO) ---
 Use este CSS no <head> para garantir a formatação Premium:

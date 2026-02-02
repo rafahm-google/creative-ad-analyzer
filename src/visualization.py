@@ -8,7 +8,7 @@ def generate_visualizations(csv_path, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     
     df = pd.read_csv(csv_path)
-    cols = ['Weekly+', 'mix_emotional_pct', 'mix_rational_pct' 'mix_product_pct', 'mix_brand_pct']
+    cols = ['PerformanceMetric', 'mix_emotional_pct', 'mix_rational_pct' 'mix_product_pct', 'mix_brand_pct']
     cols = [c for c in cols if c in df.columns]
     
     if len(cols) < 2: return
